@@ -3,17 +3,16 @@ from  flask import Flask #importa
 from api.conta import conta #importa1
 from api.lista_conta import listaconta #importa2
 from api.delet_nova import deletnova #importa3
-from api.info import info #importa3
-from api.salarioxgasto import salarioxgasto #importa3
-
-app= Flask(__name__)#instancia frem work
+from api.info import info #importa4
+from api.salario import salario #importa5
+app= Flask(__name__)
 
 #criar um endpoint
 app.register_blueprint(conta,url_prefix='/api/conta/')
 app.register_blueprint(listaconta,url_prefix='/api/listaconta/')
 app.register_blueprint(deletnova,url_prefix='/api/deletnova/')
 app.register_blueprint(info,url_prefix='/api/info/')
-app.register_blueprint(salarioxgasto,url_prefix='/api/salarioxgasto/')
+app.register_blueprint(salario,url_prefix='/api/salario/')
 
 #xy.com/alguma coisa que vc decide
 @app.route("/")#aqui<<

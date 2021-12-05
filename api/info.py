@@ -1,11 +1,11 @@
 from flask import Flask, Blueprint, request, jsonify
 import sqlite3
-from api.salarioxgasto import deleta #importa3
+
 
 #especificar rota
 info = Blueprint('info',__name__)#ele adiciona uma su roda que se chama cliente
 
-info.register_blueprint(deleta,url_prefix='/deleta/')
+
 
 def conectar():
     return sqlite3.connect('database/info.db')

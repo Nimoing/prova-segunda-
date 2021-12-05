@@ -1,7 +1,7 @@
 import sqlite3
 
 try:
-    conn = sqlite3.connect('database/tabela.db')#ele cria na ´pasta em bloco de testo
+    conn = sqlite3.connect('database/tabela_sala.db')#ele cria na ´pasta em bloco de testo
     conn.execute('drop table if exists tb_tabela')
     #aqui ele cria a tabela com seus tipos sendo id nome entre outros
     conn.execute('''
